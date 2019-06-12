@@ -23,15 +23,15 @@ Before you begin, you first need to set up your environment:
 
 Enable **email signin** in Firebase console:
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/firebase-add-user-step0-300x149.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/firebase-add-user-step0-1500x746.png)
 
 Create a user to test chat functions:
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/firebase-add-user-step1-300x138.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/firebase-add-user-step1-1500x692.png)
 
 Choose email and password:
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/firebase-add-user-step2-300x138.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/firebase-add-user-step2-1500x692.png)
 
 Add the user with “ADD USER” button.
 
