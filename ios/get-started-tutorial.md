@@ -41,11 +41,11 @@ This first tutorial will focus on the creation of a simple  **single view applic
 
 First open Xcode, select File > New > Project and choose Single View App:
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-create-project-step1-300x216.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-create-project-step1-1030x742.png)
 
 Insert the project info using **MyChat** as project name and insert your team:
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-create-project-step2-300x217.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-create-project-step2-1030x745.png)
 
 ## Create the Firebase iOS App
 
@@ -105,7 +105,7 @@ NOTE: we are currently developing a more useful pod distribution files.
 
 First remove the two files FirstViewController.{h,m} because we’ll use our chat’s conversations’s history as root View Controller.
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-remove-files-300x232.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-remove-files-1030x796.png)
 
 Open **AppDelegate.m** adding the following import directives:
 
@@ -148,11 +148,11 @@ Now  **launch**  the project.
 
 If everything is correct you will see the conversations’ history with no conversations.
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/app-view-conversations-2-171x300.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/app-view-conversations-2.png)
 
 As you can see, in the  **authWithEmail**  completion block we use the _createContactFor_ method to create a contact on the remote backend for the currently signed user. In this way every user will add his metadata to contacts as soon as he sign in. The button on the upper right corner open the contacts list.
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/app-view-select-contact-2-171x300.png)
+![](http://www.chat21.org/wp-content/uploads/2018/02/app-view-select-contact-2.png)
 
 You will see yourself listed. If you want you can chat with yourself but it’s better to create another user and sign in on a chat installed on another device (or simulator instance).
 
