@@ -53,7 +53,7 @@ Switch on project on Firebase, go to the _Firebase Console_ > _Project Overview_
 
 When prompted, enter your app’s bundle ID. It’s important to enter the bundle ID your app is using, this can only be set when you add an app to your Firebase project.
 
-At the end, you’ll download a **GoogleService-Info.plist file**. You can download this file again at any time.
+At the end, you’ll download a **GoogleService-Info.plist** file. You can download this file again at any time.
 
 Now add this file to your Xcode project root using the Add Files utility in Xcode (from the File menu, click Add Files). Make sure the file is included in your app’s build target.
 
@@ -62,11 +62,10 @@ Now add this file to your Xcode project root using the Add Files utility in Xcod
 Now go back to your Xcode project and add firebase libraries to your project.
 
 We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply create a file named “Podfile” in the project’s root folder with the following content:
-
+<pre>
+<code>
     platform :ios, '10.0'
-    
     target 'MyChat' do
-    
     pod 'NYTPhotoViewer'
     **pod 'Firebase/Core'**
     **pod 'Firebase/Database'**
@@ -75,7 +74,8 @@ We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply creat
     pod 'Firebase/Storage'
     
     end
-
+</code>
+</pre>
 Close Xcode and run:
 
 > **pod install**
