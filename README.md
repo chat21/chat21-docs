@@ -8,11 +8,11 @@ Please choose a platform to start:
 
 ## iOS
 
-[Get started tutorial](https://github.com/chat21/chat21-docs/blob/master/ios/get-started-tutorial.md)
+[Get started tutorial](ios/get-started-tutorial.md)
 
-[Advanced tutorial \(Tab based chat Application\)](https://github.com/chat21/chat21-ios-demo)
+[Advanced tutorial \(Tab based chat Application\)](chat21-ios-demo)
 
-[APIs](https://github.com/chat21/chat21-docs/ios/api)
+[APIs](ios/api)
 
 ## Android
 
