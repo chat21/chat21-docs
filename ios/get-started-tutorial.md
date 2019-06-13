@@ -57,21 +57,24 @@ At the end, you’ll download a **GoogleService-Info.plist** file. You can downl
 
 Now add this file to your Xcode project root using the Add Files utility in Xcode (from the File menu, click Add Files). Make sure the file is included in your app’s build target.
 
-## Add Firebase libs to the project
+## Add Firebase (and other) libs to the project
 
 Now go back to your Xcode project and add firebase libraries to your project.
 
 We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply create a file named “Podfile” in the project’s root folder with the following content:
 <pre>
 <code>
+    
     platform :ios, '10.0'
+    
     target 'MyChat' do
     pod 'NYTPhotoViewer'
-    <b>pod 'Firebase/Core'</b>
-    **pod 'Firebase/Database'**
-    **pod 'Firebase/Auth'**
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
     pod 'Firebase/Messaging'
     pod 'Firebase/Storage'
+    
     end
 </code>
 </pre>
@@ -107,13 +110,18 @@ First remove the two files FirstViewController.{h,m} because we’ll use our cha
 ![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-remove-files-1030x796.png)
 
 Open **AppDelegate.m** adding the following import directives:
+<pre>
+<code>
 
     #import "AppDelegate.h"
-    #import "ChatManager.h"
-    #import "ChatUIManager.h"
-    #import "ChatUser.h"
-    #import "ChatAuth.h"
-    @import Firebase;
+    <b>#import "ChatManager.h"</b>
+    <b>#import "ChatUIManager.h"</b>
+    <b>#import "ChatUser.h"</b>
+    <b>#import "ChatAuth.h"</b>
+    <b>@import Firebase;</b>
+    
+<pre>
+<code>
 
 Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOptions** method, adding the following code:
 
