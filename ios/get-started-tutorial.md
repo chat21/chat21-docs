@@ -110,24 +110,27 @@ First remove the two files FirstViewController.{h,m} because we’ll use our cha
 ![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-remove-files-1030x796.png)
 
 Open **AppDelegate.m** adding the following import directives:
-<pre>
-<code>
 
-    #import "AppDelegate.h"
-    <b>#import "ChatManager.h"</b>
-    <b>#import "ChatUIManager.h"</b>
-    <b>#import "ChatUser.h"</b>
-    <b>#import "ChatAuth.h"</b>
-    <b>@import Firebase;</b>
-    
 <pre>
 <code>
+   #import "AppDelegate.h"
+   <b>#import "ChatManager.h"</b>
+   <b>#import "ChatUIManager.h"</b>
+   <b>#import "ChatUser.h"</b>
+   <b>#import "ChatAuth.h"</b>
+   <b>@import Firebase;</b>
+</pre>
+</code>
 
 Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOptions** method, adding the following code:
 
+<pre>
+<code>
     [FIRApp configure];
     [ChatManager configure];
     return YES;
+</pre>
+</code>
 
 Using the previously created user’s email and password, add the highlighted code to the **didFinishLaunchingWithOptions** method:
 
