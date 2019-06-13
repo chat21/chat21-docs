@@ -134,10 +134,12 @@ Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOpt
 
 Using the previously created user’s email and password, add the highlighted code to the **didFinishLaunchingWithOptions** method:
 
+<pre>
+<code>
     [FIRApp configure];
     [ChatManager configure];
     
-    NSString *email = @"YOUR-EMAIL";
+    <b>NSString *email = @"YOUR-EMAIL";
     NSString *password = @"YOUR-PASSWORD";
     [ChatAuth authWithEmail:email password:password completion:^(ChatUser *user, NSError *error) {
       if (error) {
@@ -152,8 +154,11 @@ Using the previously created user’s email and password, add the highlighted co
         self.window.rootViewController = conversationsVC;
         [[ChatManager getInstance] createContactFor:user withCompletionBlock:nil];
       }
-    }];
+    }];</b>
     return YES;
+</pre>
+</code>
+
 Now  **launch**  the project.
 
 If everything is correct you will see the conversations’ history with no conversations.
