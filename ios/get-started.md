@@ -72,13 +72,14 @@ We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply creat
     platform :ios, '10.0'
 
     target 'MyChat' do
+    pod 'SVProgressHUD'
     pod 'NYTPhotoViewer'
+    pod 'KeychainItemWrapper'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'Firebase/Messaging'
     pod 'Firebase/Storage'
-
     end
 
 ```
@@ -108,7 +109,7 @@ to your Xcode project using the Add Files utility in Xcode \(from the File menu,
 
 NOTE: we are currently developing a more useful pod distribution files.
 
-## Get start with the UI
+## Get started with the UI
 
 First remove the two files FirstViewController.{h,m} because we’ll use our chat’s conversations’s history as root View Controller.
 
