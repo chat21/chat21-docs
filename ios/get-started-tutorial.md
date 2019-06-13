@@ -67,7 +67,7 @@ We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply creat
     platform :ios, '10.0'
     target 'MyChat' do
     pod 'NYTPhotoViewer'
-    **pod 'Firebase/Core'**
+    <b>pod 'Firebase/Core'</b>
     **pod 'Firebase/Database'**
     **pod 'Firebase/Auth'**
     pod 'Firebase/Messaging'
