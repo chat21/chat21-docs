@@ -113,12 +113,12 @@ Open **AppDelegate.m** adding the following import directives:
 
 <pre>
 <code>
-   #import "AppDelegate.h"
-   <b>#import "ChatManager.h"</b>
-   <b>#import "ChatUIManager.h"</b>
-   <b>#import "ChatUser.h"</b>
-   <b>#import "ChatAuth.h"</b>
-   <b>@import Firebase;</b>
+    #import "AppDelegate.h"
+    <b>#import "ChatManager.h"</b>
+    <b>#import "ChatUIManager.h"</b>
+    <b>#import "ChatUser.h"</b>
+    <b>#import "ChatAuth.h"</b>
+    <b>@import Firebase;</b>
 </pre>
 </code>
 
@@ -155,6 +155,7 @@ Using the previously created user’s email and password, add the highlighted co
         [[ChatManager getInstance] createContactFor:user withCompletionBlock:nil];
       }
     }];</b>
+
     return YES;
 </pre>
 </code>
