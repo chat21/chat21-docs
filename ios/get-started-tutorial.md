@@ -126,8 +126,8 @@ Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOpt
 
 <pre>
 <code>
-    [FIRApp configure];
-    [ChatManager configure];
+    <b>[FIRApp configure];</b>
+    <b>[ChatManager configure];</b>
     return YES;
 </pre>
 </code>
