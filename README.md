@@ -8,7 +8,7 @@ Please choose a platform to start:
 
 ## iOS
 
-[Get started tutorial](https://github.com/chat21/chat21-docs/blob/master/ios/get-started-tutorial)
+[Get started tutorial](https://github.com/chat21/chat21-docs/blob/master/ios/get-started-tutorial.md)
 
 [Advanced tutorial \(Tab based chat Application\)](https://github.com/chat21/chat21-ios-demo)
 
