@@ -72,7 +72,6 @@ We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply creat
     **pod 'Firebase/Auth'**
     pod 'Firebase/Messaging'
     pod 'Firebase/Storage'
-    
     end
 </code>
 </pre>
