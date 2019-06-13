@@ -1,10 +1,14 @@
+---
+description: Create a fully functional chat as a Single View Application
+---
+
 # Get started tutorial
 
 **Your first iOS App with Chat21 SDK**
 
 ## Introduction
 
-With this tutorial you will learn how to create a fully functional chat as a Single View Application.
+With this tutorial you will learn how to create a fully functional chat as a **Single View Application** using XCode.
 
 The full code of this tutorial is available on GitHub:
 
@@ -65,9 +69,6 @@ Now go back to your Xcode project and add firebase libraries to your project.
 We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply create a file named “Podfile” in the project’s root folder with the following content:
 
 ```text
-
-
-
     platform :ios, '10.0'
 
     target 'MyChat' do
@@ -79,7 +80,6 @@ We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply creat
     pod 'Firebase/Storage'
 
     end
-
 
 ```
 
@@ -139,7 +139,7 @@ Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOpt
 
 ```
 
-Using the previously created user’s email and password, add the highlighted code to the **didFinishLaunchingWithOptions** method:
+Using the previously created user’s email and password, add this code to the **didFinishLaunchingWithOptions** method:
 
 ```text
 
