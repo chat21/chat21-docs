@@ -76,8 +76,10 @@ We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply creat
     pod 'Firebase/Storage'
     
     end
+
 </code>
 </pre>
+
 Close Xcode and run:
 
 > **pod install**
@@ -119,8 +121,8 @@ Open **AppDelegate.m** adding the following import directives:
     <b>#import "ChatUser.h"</b>
     <b>#import "ChatAuth.h"</b>
     <b>@import Firebase;</b>
-</pre>
 </code>
+</pre>
 
 Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOptions** method, adding the following code:
 
@@ -129,8 +131,8 @@ Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOpt
     <b>[FIRApp configure];</b>
     <b>[ChatManager configure];</b>
     return YES;
-</pre>
 </code>
+</pre>
 
 Using the previously created user’s email and password, add the highlighted code to the **didFinishLaunchingWithOptions** method:
 
@@ -157,8 +159,9 @@ Using the previously created user’s email and password, add the highlighted co
     }];</b>
 
     return YES;
-</pre>
 </code>
+</pre>
+
 
 Now  **launch**  the project.
 
