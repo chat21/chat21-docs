@@ -21,10 +21,20 @@ Before you begin, you first need to set up your environment:
 1. Xcode 9.0 or later
 2. An Xcode project targeting iOS 9 or above
 3. The bundle identifier of your app
-4. **Firebase project**. Create one free on  [https://firebase.google.com](https://firebase.google.com/)
-5. **Firebase functions**. Install  [**Chat21 cloud functions**](https://github.com/chat21/chat21-cloud-functions) on your just created Firebase project. This is the “backend” of the chat. Installation instructions are available [here](https://github.com/chat21/chat21-cloud-functions)
+
+## Firebase setup
+
+### **Create a Firebase project**
+
+Sign up on Firebase and create a project. Please refer directly to Firebase [https://firebase.google.com](https://firebase.google.com/) to accomplish this task.
+
+### Setup backend for your Firebase project
+
+After you successfully created a Firebase project you must **setup the backend**. Install  [**Chat21 cloud functions**](https://github.com/chat21/chat21-cloud-functions) on your just created Firebase project.
 
 ## Configure authentication
+
+Now that you have just setup your Firebase project and installed the backend functions you can enable email authentication to provide an easy way to your app to sign in with an email and a password.
 
 Enable **email signin** in Firebase console:
 
@@ -42,7 +52,7 @@ Add the user with “ADD USER” button.
 
 ## Create the Xcode project
 
-This first tutorial will focus on the creation of a simple **single view application**. In the next \(upcoming\) tutorial we will approach the creation of a more realistic **multi tab application** \(similar to Whatsapp\).
+This tutorial will focus on the creation of a simple **single view application**. In the next tutorial you will approach the creation of a more realistic **multi tab application** \(similar to Whatsapp\).
 
 First open Xcode, select File &gt; New &gt; Project and choose Single View App:
 
@@ -54,7 +64,7 @@ Insert the project info using **MyChat** as project name and insert your team:
 
 ## Create the Firebase iOS App
 
-Switch on project on Firebase, go to the _Firebase Console_ &gt; _Project Overview_ and add a **iOS App** to your project by clicking on “Add iOS App” and follow the setup steps.
+Switch on the project on Firebase, go to the _Firebase Console_ &gt; _Project Overview_ and add a **iOS App** to your project by clicking on “Add iOS App” and follow the setup steps.
 
 When prompted, enter your app’s bundle ID. It’s important to enter the bundle ID your app is using, this can only be set when you add an app to your Firebase project.
 
@@ -62,24 +72,15 @@ At the end, you’ll download a **GoogleService-Info.plist** file. You can downl
 
 Now add this file to your Xcode project root using the Add Files utility in Xcode \(from the File menu, click Add Files\). Make sure the file is included in your app’s build target.
 
-## Add Firebase \(and other\) libs to the project
+## Add Chat21 SDK to the project
 
-Now go back to your Xcode project and add firebase libraries to your project.
-
-We prefer CocoaPods to add Firebase libraries. If you use CocoaPods simply create a file named “Podfile” in the project’s root folder with the following content:
+If you use CocoaPods simply create a file named “Podfile” in the project’s root folder with the following content:
 
 ```text
     platform :ios, '10.0'
 
     target 'MyChat' do
-    pod 'SVProgressHUD'
-    pod 'NYTPhotoViewer'
-    pod 'KeychainItemWrapper'
-    pod 'Firebase/Core'
-    pod 'Firebase/Database'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Messaging'
-    pod 'Firebase/Storage'
+    pod 'Chat21'
     end
 
 ```
@@ -89,25 +90,6 @@ Close Xcode and run:
 > **pod install**
 
 From now on open the project using _MyChat.xcworkspace_ file.
-
-NOTE: the complete guide to add Firebase libs to you project is available here:
-
-[https://firebase.google.com/docs/ios/setup](https://firebase.google.com/docs/ios/setup)
-
-## Install Chat21 libraries
-
-Download the Chat21 libraries directly as zip archive from GitHub here:
-
-[https://github.com/chat21/chat21-ios-sdk](https://github.com/chat21/chat21-ios-sdk)
-
-Add the two folders:
-
-* Chat21Core
-* Chat21UI
-
-to your Xcode project using the Add Files utility in Xcode \(from the File menu, click Add Files\). Make sure the folders are included in your app’s build target.
-
-NOTE: we are currently developing a more useful pod distribution files.
 
 ## Get started with the UI
 
