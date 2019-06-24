@@ -60,9 +60,9 @@ First open Xcode, select File &gt; New &gt; Project and choose Single View App:
 
 ![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-create-project-step1-1030x742.png)
 
-Insert the project info using **MyChat** as project name and insert your team:
+Insert the project info using **MyChat** as project name and insert your team:  
 
-![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-create-project-step2-1030x745.png)
+![](../.gitbook/assets/create-swift-mychat.png)
 
 ## Create the Firebase iOS App
 
@@ -76,7 +76,7 @@ Now add this file to your Xcode project root using the Add Files utility in Xcod
 
 ## Add Chat21 SDK to the project
 
-If you use CocoaPods simply create a file named “Podfile” in the project’s root folder with the following content:
+Chat21 uses CocoaPods so simply create a file named “Podfile” in the project’s root folder with the following content:
 
 ```text
 platform :ios, '10.0'
@@ -88,17 +88,13 @@ end
 
 ```
 
-Close Xcode and run:
+**Close Xcode** and run:
 
 > **pod install**
 
 From now on open the project using _MyChat.xcworkspace_ file.
 
 ## Get started with the UI
-
-First remove the two files FirstViewController.{h,m} because we’ll use our chat’s conversations’s history as root View Controller.
-
-![](http://www.chat21.org/wp-content/uploads/2018/02/xcode-remove-files-1030x796.png)
 
 Open **AppDelegate.m** adding the following import directives:
 
@@ -188,15 +184,11 @@ If everything is correct you will see the conversations’ history with no conve
 
 ![](http://www.chat21.org/wp-content/uploads/2018/02/app-view-conversations-2.png)
 
-As you can see, in the **authWithEmail** completion block we use the _createContactFor_ method to create a contact on the remote backend for the currently signed user. In this way every user will add his metadata to contacts as soon as he sign in. The button on the upper right corner open the contacts list.
+As you can see, in the **authWithEmail** completion block we use the _createContactFor_ method to create a contact on the remote backend for the currently signed user. In this way every user will add his metadata to contacts as soon as he signs in. The button on the upper right corner opens the contacts list.
 
 ![](http://www.chat21.org/wp-content/uploads/2018/02/app-view-select-contact-2.png)
 
 You will see yourself listed. If you want you can chat with yourself but it’s better to create another user and sign in on a chat installed on another device \(or simulator instance\).
 
 Happy chatting 🙂
-
-The full code of this tutorial is available on GitHub:
-
-[DOWNLOAD SOURCE CODE](https://github.com/chat21/chat21-get-started-ios)
 
