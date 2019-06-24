@@ -2,17 +2,19 @@
 description: Create a fully functional chat as a Single View Application
 ---
 
-# Get started tutorial
+# Get Started
 
 **Your first iOS App with Chat21 SDK**
 
 ## Introduction
 
-With this tutorial you will learn how to create a fully functional chat as a **Single View Application** using XCode.
+With this tutorial you will learn how to create a fully functional chat as a **Single View Application** in _Swift_ or _Objective-c_ using XCode.
 
 The full code of this tutorial is available on GitHub:
 
-[DOWNLOAD SOURCE CODE](https://github.com/chat21/chat21-get-started-ios)
+[DOWNLOAD SWIFT SOURCE CODE](https://github.com/chat21/chat21-get-started-swift)
+
+[DOWNLOAD OBJECTIVE-C SOURCE CODE](https://github.com/chat21/chat21-get-started-ios)
 
 ## Prerequisites
 
@@ -26,11 +28,11 @@ Before you begin, you first need to set up your environment:
 
 ### **Create a Firebase project**
 
-Sign up on Firebase and create a project. Please refer directly to Firebase [https://firebase.google.com](https://firebase.google.com/) to accomplish this task.
+Sign up on Firebase and create a project. Please refer directly to Firebase [https://firebase.google.com](https://firebase.google.com/) to accomplish and better understand this task. Chat21 relies on Firebase as the backend, so it's really important for you to acquire familiarity with Firebase and all of his services.
 
-### Setup backend for your Firebase project
+### Setup the backend for your project
 
-After you successfully created a Firebase project you must **setup the backend**. Install  [**Chat21 cloud functions**](https://github.com/chat21/chat21-cloud-functions) on your just created Firebase project.
+After you successfully created a Firebase project you must **setup the backend**. Please follow this link to install [**Chat21 cloud functions**](https://github.com/chat21/chat21-cloud-functions) on your just created Firebase project.
 
 ## Configure authentication
 
@@ -77,11 +79,12 @@ Now add this file to your Xcode project root using the Add Files utility in Xcod
 If you use CocoaPods simply create a file named “Podfile” in the project’s root folder with the following content:
 
 ```text
-    platform :ios, '10.0'
+platform :ios, '10.0'
+use_frameworks!
 
-    target 'MyChat' do
-    pod 'Chat21'
-    end
+target 'MyChat' do
+  pod 'Chat21'
+end
 
 ```
 
@@ -99,57 +102,85 @@ First remove the two files FirstViewController.{h,m} because we’ll use our cha
 
 Open **AppDelegate.m** adding the following import directives:
 
-```text
-
-
-    #import "AppDelegate.h"
-    #import "ChatManager.h"
-    #import "ChatUIManager.h"
-    #import "ChatUser.h"
-    #import "ChatAuth.h"
-    @import Firebase;
-
+{% tabs %}
+{% tab title="Swift" %}
+```swift
+import Firebase
+import Chat21
 ```
+{% endtab %}
+
+{% tab title="Objective-c" %}
+```objectivec
+#import "AppDelegate.h"
+#import "ChatManager.h"
+#import "ChatUIManager.h"
+#import "ChatUser.h"
+#import "ChatAuth.h"
+@import Firebase;
+```
+{% endtab %}
+{% endtabs %}
 
 Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOptions** method, adding the following code:
 
-```text
-
-
-    [FIRApp configure];
-    [ChatManager configure];
-    return YES;
-
+{% tabs %}
+{% tab title="Swift" %}
+```swift
+FirebaseApp.configure()
+ChatManager.configure()
+let email = "YOUR EMAIL";
+let password = "YOUR PASSWORD";
+ChatAuth.auth(withEmail: email, password: password) { (user, error) in
+    if let err = error {
+        print("Authentication error: ", err.localizedDescription);
+    }
+    else {
+        let chatm = ChatManager.getInstance()
+        if let user = user {
+            user.firstname = "YOUR FIRST NAME";
+            user.lastname = "YOUR LAST NAME";
+            chatm?.start(with: user)
+            let conversationsVC = ChatUIManager.getInstance().getConversationsViewController()
+            if let window = self.window {
+                window.rootViewController = conversationsVC
+            }
+            chatm?.createContact(for: user, withCompletionBlock: { (error) in
+                print("Contact successfully created.")
+            })
+        }
+    }
+}
+return true
 ```
+{% endtab %}
+
+{% tab title="Objective-c" %}
+```objectivec
+[FIRApp configure];
+[ChatManager configure];
+
+NSString *email = @"YOUR-EMAIL";
+NSString *password = @"YOUR-PASSWORD";
+[ChatAuth authWithEmail:email password:password completion:^(ChatUser *user, NSError *error) {
+  if (error) {
+    NSLog(@"Authentication error. %@", error);
+  }
+  else {
+    ChatManager *chatm = [ChatManager getInstance];
+    user.firstname = @"YOUR FIRST NAME";
+    user.lastname = @"YOUR LAST NAME";
+    [chatm startWithUser:user];
+    UINavigationController *conversationsVC = [[ChatUIManager getInstance] getConversationsViewController];
+    self.window.rootViewController = conversationsVC;
+    [[ChatManager getInstance] createContactFor:user withCompletionBlock:nil];
+  }
+}];
+```
+{% endtab %}
+{% endtabs %}
 
 Using the previously created user’s email and password, add this code to the **didFinishLaunchingWithOptions** method:
-
-```text
-
-
-    [FIRApp configure];
-    [ChatManager configure];
-
-    NSString *email = @"YOUR-EMAIL";
-    NSString *password = @"YOUR-PASSWORD";
-    [ChatAuth authWithEmail:email password:password completion:^(ChatUser *user, NSError *error) {
-      if (error) {
-        NSLog(@"Authentication error. %@", error);
-      }
-      else {
-        ChatManager *chatm = [ChatManager getInstance];
-        user.firstname = @"John";
-        user.lastname = @"Nash";
-        [chatm startWithUser:user];
-        UINavigationController *conversationsVC = [[ChatUIManager getInstance] getConversationsViewController];
-        self.window.rootViewController = conversationsVC;
-        [[ChatManager getInstance] createContactFor:user withCompletionBlock:nil];
-      }
-    }];
-
-    return YES;
-
-```
 
 Now **launch** the project.
 

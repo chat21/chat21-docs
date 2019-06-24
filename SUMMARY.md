@@ -4,5 +4,5 @@
 
 ## iOS
 
-* [Get started tutorial](ios/get-started.md)
+* [Get Started](ios/get-started.md)
 
