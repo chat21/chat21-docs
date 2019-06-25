@@ -1,6 +1,6 @@
-# Initial page
+# Overview
 
-## Initial page
+## Introduction
 
 Chat21 helps you adding instant messaging to your iOS or Android app.
 

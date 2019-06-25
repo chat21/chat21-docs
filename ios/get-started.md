@@ -2,9 +2,7 @@
 description: Create a fully functional chat as a Single View Application
 ---
 
-# Get Started
-
-**Your first iOS App with Chat21 SDK**
+# Get Started for iOS
 
 ## Introduction
 

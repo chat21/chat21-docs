@@ -1,8 +1,8 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Overview](README.md)
 
 ## iOS
 
-* [Get Started](ios/get-started.md)
+* [Get Started for iOS](ios/get-started.md)
 
