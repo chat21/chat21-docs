@@ -4,7 +4,7 @@
 
 Chat21 helps you adding instant messaging to your iOS or Android app.
 
-IOS and Android SDKs provide you methods to initialize and configure chat features embedded in your own app. Chat21 SDKs helps you to build a standalone chat application as well. The SDKs provide ready to use UI components and Extension Points for fast addressing and customizing a chat into your app. Chat21 uses Firebase platform as backend [http://firebase.google.com](http://firebase.google.com)
+IOS and Android SDKs provide you methods to initialize and configure chat features embedded in your own app. Chat21 SDKs helps you to build a standalone chat application as well. The SDKs provide ready to use UI components and _extension points_ for embedding and customizing a chat into your app. Chat21 uses [Firebase](http://firebase.google.com) platform as backend.
 
 Please choose a platform to start:
 
