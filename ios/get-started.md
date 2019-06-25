@@ -36,7 +36,7 @@ After you successfully created a Firebase project you must **setup the backend**
 
 ## Configure authentication
 
-Now that you have just setup your Firebase project and installed the backend functions you can enable email authentication to provide an easy way to your app to sign in with an email and a password.
+Now with the setup of your Firebase project and backend functions installed you can enable email authentication to provide an easy way for your app to sign in with email and password.
 
 Enable **email signin** in Firebase console:
 
