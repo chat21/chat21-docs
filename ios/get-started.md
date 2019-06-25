@@ -190,3 +190,5 @@ You will see yourself listed. If you want you can chat with yourself but it’s 
 
 Happy chatting 🙂
 
+Feel free to send feedbacks to [support@frontiere21.it](mailto:support@frontiere21.it)
+
