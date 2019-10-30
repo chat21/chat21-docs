@@ -18,6 +18,8 @@ Please choose a platform to start:
 
 ## Android
 
+[Get started tutorial](android/get-started-for-android.md)
+
 ## Web
 
 ## Backend

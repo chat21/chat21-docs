@@ -8,5 +8,5 @@
 
 ## Android
 
-* [Get started for Android](android/get-started-for-android.md)
+* [Get Started for Android](android/get-started-for-android.md)
 
