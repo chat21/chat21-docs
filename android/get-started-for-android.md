@@ -130,11 +130,11 @@ multiDexEnabled true
 }
 dependencies {
 // ...
-compile 'com.android.support:multidex:1.0.1'
-compile "com.google.android.gms:play-services:11.8.0"
-compile 'com.android.support:design:28.0.0'
-compile 'org.chat21.android:chat21:1.0.10'
-compile 'com.vanniktech:emoji-ios:0.5.1'
+implementation 'com.android.support:multidex:1.0.1'
+implementation "com.google.android.gms:play-services:11.8.0"
+implementation 'com.android.support:design:28.0.0'
+implementation 'org.chat21.android:chat21:1.0.10'
+implementation 'com.vanniktech:emoji-ios:0.5.1'
 }
 // ...
 configurations.all {
