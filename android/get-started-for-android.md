@@ -132,9 +132,12 @@ dependencies {
 // ...
 implementation 'com.android.support:multidex:1.0.1'
 implementation "com.google.android.gms:play-services:11.8.0"
+implementation 'com.android.support:support-v4:28.0.0'
 implementation 'com.android.support:design:28.0.0'
-implementation 'org.chat21.android:chat21:1.0.10'
+implementation 'org.chat21.android:chat21:1.0.15'
 implementation 'com.vanniktech:emoji-ios:0.5.1'
+implementation 'com.github.bumptech.glide:glide:3.7.0'
+implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
 }
 // ...
 configurations.all {
