@@ -5,6 +5,8 @@
 ## iOS
 
 * [Get Started for iOS](ios/get-started.md)
+* [Authentication](ios/authentication.md)
+* [User Interface](ios/user-interface.md)
 
 ## Android
 

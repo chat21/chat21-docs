@@ -12,15 +12,9 @@ Please choose a platform to start:
 
 [Get started tutorial](ios/get-started.md)
 
-[Advanced tutorial \(Tab based chat Application\)](https://github.com/chat21/chat21-docs/tree/8ab923d159962acfcaf604579422dfbfd81c7689/chat21-ios-demo/README.md)
-
 [APIs](https://github.com/chat21/chat21-docs/tree/8ab923d159962acfcaf604579422dfbfd81c7689/ios/api/README.md)
 
 ## Android
 
 [Get started tutorial](android/get-started-for-android.md)
-
-## Web
-
-## Backend
 

@@ -36,11 +36,11 @@ Now with the setup of your Firebase project and backend functions installed you 
 
 Enable **email signin** in Firebase console:
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 Create a user to test chat functions:
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 Choose email and password:
 
@@ -56,17 +56,17 @@ First open Android Studio, select Start a new Android Studio Project and insert 
 
  **NOTE: Take note of the Package name, it will be used in the following steps**
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 Select the Phone and Tablet &gt; API Android 19: 4.4 \(Kitkat\) as minimum SDK
 
 Select Empty Activity
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 Insert the Activity and the Layout name
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 ## Create the Firebase Android App
 
@@ -78,7 +78,7 @@ At the end, you’ll download a **google-services.json** file. You can download 
 
 Now add this file to your Android project App root
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
 ## Add Firebase libs to the project
 
@@ -235,7 +235,7 @@ If everything is correct you will see the conversations’ history with no conve
 
 As you can see, in the **authWithEmail** completion block we use the _createContactFor_ method to create a contact on the remote backend for the currently signed user. In this way every user will add his metadata to contacts as soon as he sign in. The button on the bottom right corner open the contacts list.
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%286%29.png)
 
 You will see yourself listed. If you want you can chat with yourself but it’s better to create another user and sign in on a chat installed on another device \(or simulator instance\).
 
