@@ -12,7 +12,7 @@ If you have feedbacks or suggestions about this documentation, please send us an
 
 The first view that a user expects in a chat is the list of his recent conversations. Chat21 provides this feature with the **ChatUIManager.openConversations** method:
 
-```text
+```
 ChatUIManager.getInstance()?
     .openConversationsView(
         asModal: self,
@@ -23,7 +23,7 @@ ChatUIManager.getInstance()?
 
 If you want to place a button around your app to allow the _signed_ user to select a contact from available contacts and open a conversation with him you can use **ChatUIManager.openSelectContactView** method. This method opens a modal dialog that allows the selection of a user among those already registered in the App:
 
-```text
+```
 ChatUIManager.getInstance()?.openSelectContactView(asModal: self, withCompletionBlock: { (contact, canceled) in
     if (canceled) {
         print("canceled")
@@ -56,7 +56,7 @@ Please notice that while _userId_ must correspond to a valid Firebase user, _fir
 
 In this example a contact is created with the minimal information to start a conversation:
 
-```text
+```
 let contact: ChatUser = ChatUser()
 contact.userId = "5aaa99024c3b110014b478f0"; // valid Firebase uid
 contact.firstname = "Andrew";
@@ -74,25 +74,25 @@ Every contact you want to open a conversation with must be an already registered
 
 Sometimes you just need the raw UI Component just to embed the Component itself into another View \(i.e. a tab in Tabbed Application\). To access the raw components you can use the **getCOMPONENT-NAMEComponent\(\)** methods of the **ChatUIManager** class. Here follows some code snippet to get the main components of the Chat21 framework
 
-```text
+```
 let vc: UINavigationController? = 
             ChatUIManager.getInstance()?
             .getConversationsViewController()
 ```
 
-```text
+```
 let vc: UINavigationController? = 
             ChatUIManager.getInstance()?
             .getSelectContactViewController()
 ```
 
-```text
+```
 let vc: UINavigationController? = 
             ChatUIManager.getInstance()?
             .getMessagesViewController()
 ```
 
-```text
+```
 let vc: UINavigationController? = 
             ChatUIManager.getInstance()?
             .getSelectGroupViewController()
@@ -106,7 +106,7 @@ Chat21 APIs does not provide a "Profile view" because it is generally provided b
 
 Chat21 provides instead an easy way to plug in the profile view of your Application in all the UI points where this view is invoked. Simply use the **ChatUIManager.pushProfileCallback** callback to plug your external view. Here follows an example:
 
-```text
+```
 ChatUIManager.getInstance()?.pushProfileCallback = { (user, vc) in
     let storyboard: UIStoryboard  = UIStoryboard.init(name: "Main", bundle: nil);
     let profileVC: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "user-profile-vc") as! ProfileViewController    
@@ -129,7 +129,7 @@ Your custom view must simply conform to [**ChatSelectContactProtocol**](https://
 
 Once you write in your own class you can simply plug it in your project with the following lines:
 
-```text
+```
 let storyboard: UIStoryboard  = UIStoryboard.init(name: "Main", bundle: nil);
 let select_user_vc: MySelectContactViewController = storyboard.instantiateViewController(withIdentifier: "select-user-vc") as! MySelectContactViewController
 ChatUIManager.getInstance()?.selectUserViewController = select_user_vc;

@@ -76,7 +76,7 @@ Now add this file to your Xcode project root using the Add Files utility in Xcod
 
 Chat21 uses CocoaPods so simply create a file named “Podfile” in the project’s root folder with the following content:
 
-```text
+```
 platform :ios, '10.0'
 use_frameworks!
 
@@ -98,14 +98,14 @@ Open **AppDelegate.m** adding the following import directives:
 
 {% tabs %}
 {% tab title="Swift" %}
-```swift
+```
 import Firebase
 import Chat21
 ```
 {% endtab %}
 
 {% tab title="Objective-c" %}
-```objectivec
+```
 #import "AppDelegate.h"
 #import "ChatManager.h"
 #import "ChatUIManager.h"
@@ -120,7 +120,7 @@ Now configure Firebase and Chat frameworks. Edit the **didFinishLaunchingWithOpt
 
 {% tabs %}
 {% tab title="Swift" %}
-```swift
+```
 FirebaseApp.configure()
 ChatManager.configure()
 let email = "YOUR EMAIL";
@@ -150,7 +150,7 @@ return true
 {% endtab %}
 
 {% tab title="Objective-c" %}
-```objectivec
+```
 [FIRApp configure];
 [ChatManager configure];
 

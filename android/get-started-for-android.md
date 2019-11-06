@@ -86,7 +86,7 @@ Now go back to your Android project and add firebase libraries to your project.
 
 First, add rules to your **root-level** `build.gradle` file, to include the google-services plugin and the Google’s Maven repository:
 
-```text
+```
 buildscript {
     // ...
     dependencies {
@@ -106,7 +106,7 @@ allprojects {
 
 Then, in your **module** Gradle file \(usually the `app/build.gradle`\), add the `apply plugin` line at the bottom of the file to enable the Gradle plugin:
 
-```text
+```
 apply plugin: 'com.android.application'
 // ...
 dependencies {
@@ -123,7 +123,7 @@ NOTE: the complete guide to add Firebase libs to you project is available here: 
 
 Add the following to your `app/build.gradle` file:
 
-```text
+```
 defaultConfig {
 // ...
 multiDexEnabled true
@@ -154,7 +154,7 @@ configurations.all {
 
 Create a custom Application class
 
-```text
+```
 public class AppContext extends Application {
 
 @Override
@@ -167,7 +167,7 @@ protected void attachBaseContext(Context base) {
 
 and add it to the Manifest.xml
 
-```text
+```
 <application
              android:name=".AppContext"
              android:icon="@mipmap/ic_launcher"
@@ -183,7 +183,7 @@ Replace the default parent theme in your **styles.xml**
 
 “Theme.AppCompat.Light.~~**DarkActionBar”**~~ with Theme.AppCompat.Light. **NoActionBar**
 
-```text
+```
 <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
    <!-- Customize your theme here. -->
    <item name="colorPrimary">@color/colorPrimary</item>
@@ -200,7 +200,7 @@ Copy **App ID** from your Firebase Project previously created \(you can  also re
 
 Add the following code to the **onCreate** method of your Main Activity and substitute variable in bracket using the previously created user’s email and password and **App ID** from Firebase Project Settings
 
-```text
+```
 FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
 ChatManager.startWithEmailAndPassword(this, [APP_ID], 
