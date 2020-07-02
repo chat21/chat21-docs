@@ -194,11 +194,8 @@ Replace the default parent theme in your **styles.xml**
 
 **Get start with the UI**
 
-Copy **App ID** from your Firebase Project previously created \(you can  also recover it from your **Project Settings**\)
-
-![](../.gitbook/assets/cattura.jpg)
-
-Add the following code to the **onCreate** method of your Main Activity and substitute variable in bracket using the previously created user’s email and password and **App ID** from Firebase Project Settings
+Add the following code to the **onCreate** method of your Main Activity and substitute variable in bracket using the previously created user’s email and password.
+For **APP_ID** use "chat" (this is the tenant's name and MUST be the same for all of your Clients, ex. iOS)
 
 ```
 FirebaseDatabase.getInstance().setPersistenceEnabled(true);
